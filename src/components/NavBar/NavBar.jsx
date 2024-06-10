@@ -24,10 +24,11 @@ import {
     EditIcon, 
 
   } from '@chakra-ui/icons'
+import { Link } from 'react-router-dom'
 
 const NavBar = () => {
   return (
-    <Flex padding={'15px'} justify={'space-between'} background={'lightskyblue'} h={'70px'}>
+    <Flex padding={'15px'} justify={'space-between'} background={'lightskyblue'} h={'90px'}>
         <Menu>
             <MenuButton
                 as={IconButton}
@@ -36,17 +37,14 @@ const NavBar = () => {
                 variant='outline'
             />
             <MenuList>
-                <MenuItem icon={<AddIcon />} command='⌘T'>
-                New Tab
+                <MenuItem >
+                  <Link to='/categorias/Vino'> VINOS</Link>
                 </MenuItem>
-                <MenuItem icon={<ExternalLinkIcon />} command='⌘N'>
-                New Window
+                <MenuItem >
+                  <Link to='/categorias/Cerveza'> CERVEZAS</Link>
                 </MenuItem>
-                <MenuItem icon={<RepeatIcon />} command='⌘⇧N'>
-                Open Closed Tab
-                </MenuItem>
-                <MenuItem icon={<EditIcon />} command='⌘O'>
-                Open File...
+                <MenuItem>
+                  <Link to='/categorias/Whiskie'> WHISKIES</Link> 
                 </MenuItem>
             </MenuList>
         </Menu>
