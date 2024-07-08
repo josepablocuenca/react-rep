@@ -29,7 +29,7 @@ const ItemDetail = ({id, marca, variedad, precio, stock, imagen, cantidadActual}
   } 
 
   return (
-      <Card justify={'center'} align={'center'} width={'40%'}> 
+      <Card justify={'center'} align={'center'} width={'40%'} border={'solid'} borderColor={'lightgrey'}> 
         <CardBody width={'50%'} >
           <img src={imagen} width={'70%'}/>
           <Text fontSize={'20px'}>Marca : {marca} </Text>

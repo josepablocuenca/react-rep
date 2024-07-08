@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Button, Flex, Heading} from '@chakra-ui/react'
+import { Button, Flex, Heading, Text} from '@chakra-ui/react'
 import { Link } from 'react-router-dom';
 import {
     Table,
@@ -21,7 +21,7 @@ const Cart = () => {
   if(carrito.length === 0){
     return(
         <Flex direction={'column'} justify={'center'} align={'center'}>
-            <Heading>Aún no agregaste articulos a tu carrito</Heading>
+            <Heading  m={'30px'}>Aún no agregaste articulos a tu carrito</Heading>
             <Button><Link to='/'>Home</Link></Button>
         </Flex>
     )
@@ -33,11 +33,11 @@ const Cart = () => {
         <Table variant='striped' colorScheme='teal'>
             {/* <TableCaption>Imperial to metric conversion factors</TableCaption> */}
                 <Thead>
-                    <Tr>
-                        <Th>Nombre</Th>
-                        <Th>Cantidad</Th>
-                        <Th>Precio unitario</Th>
-                        <Th>Subtotal</Th>  
+                    <Tr> 
+                        <Th fontSize={'18px'}>Nombre</Th>
+                        <Th fontSize={'18px'}>Cantidad</Th>
+                        <Th fontSize={'18px'}>Precio unitario</Th>
+                        <Th fontSize={'18px'}>Subtotal</Th>  
                     </Tr>
                 </Thead>
                 <Tbody>
@@ -45,14 +45,13 @@ const Cart = () => {
                     carrito.map((prod) =>(
                     <Tr key={prod.id}>
                         <Td>{prod.marca} {prod.variedad}</Td>
-                        {/* <Td>{prod.quantity}</Td> */}
                         <Td>
-                            <Button onClick={()=> decrementarItem(prod.id)}> - </Button>
+                            <Button onClick={()=> decrementarItem(prod.id)} > - </Button>
                             {prod.quantity}
                             <Button onClick={()=> incrementarItem(prod.id, prod.stock)}> + </Button>
                         </Td>
-                        <Td>{prod.precio}</Td>
-                        <Td>{prod.precio*prod.quantity}</Td>
+                        <Td>$ {prod.precio}</Td>
+                        <Td>$ {prod.precio*prod.quantity}</Td>
                         <Td><Button onClick={()=>eliminarArticulo(prod.id)}><RiDeleteBin6Line /></Button></Td>
                     </Tr>
                     ))

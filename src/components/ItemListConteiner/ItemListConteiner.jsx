@@ -57,7 +57,7 @@ const ItemListConteiner = ({titulo}) => {
   
   return (
    
-   <Flex direction={'column'} align={'center'} >
+   <Flex direction={'column'} align={'center'}>
 
         <Heading>{titulo}</Heading>
         {

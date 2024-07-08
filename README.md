@@ -6,6 +6,7 @@
 
 ### Deploy
 
+https://reacteshopcodere.netlify.app/
 
 ### Descripción 
 
@@ -41,6 +42,7 @@ SweetAlert2
     - npm run dev
 
 ### Estructura del proyecto 
+
 
 #### Navbar 
 
