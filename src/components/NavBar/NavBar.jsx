@@ -28,7 +28,9 @@ import { Link } from 'react-router-dom'
 
 const NavBar = () => {
   return (
-    <Flex padding={'15px'} justify={'space-between'} background={'lightskyblue'} h={'90px'}>
+    <Flex padding={'15px'} justify={'space-between'} background={'lightskyblue'} h={'90px'} mb={'20px'}>
+      <Flex direction={'column'}>
+        <Heading fontSize={'20px'}>Categorias</Heading> 
         <Menu>
             <MenuButton
                 as={IconButton}
@@ -36,6 +38,7 @@ const NavBar = () => {
                 icon={<HamburgerIcon />}
                 variant='outline'
             />
+            
             <MenuList>
                 <MenuItem >
                   <Link to='/categorias/Vino'> VINOS</Link>
@@ -48,6 +51,7 @@ const NavBar = () => {
                 </MenuItem>
             </MenuList>
         </Menu>
+    </Flex>  
         <Heading> React E-commerce!</Heading>
         <CartWidget />    
       

@@ -1,8 +1,71 @@
-# React + Vite
+# TIENDA REACT JS E-COMMERCE
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Logo
 
-Currently, two official plugins are available:
+![image](/REACT%20JS/src/assets/logo.jpg)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Deploy
+
+
+### Descripción 
+
+Ecommerce creado en curso React 
+
+### Construido 
+
+React
+Firebase
+
+### Dependencias
+
+Chakra
+Axios
+React icon 
+React router dom
+React spinner
+React tostify
+SweetAlert2
+
+### Instalción
+
+- Clonar repo
+    - git clone https://github.com/josepablocuenca/react-rep
+
+- Moverse a carpeta del proyecto 
+    - cd REACT JS
+
+- Instalar dependencias 
+    - npm install 
+
+- Compilamos 
+    - npm run dev
+
+### Estructura del proyecto 
+
+#### Navbar 
+
+Menú categorias 
+Icono carrito
+
+#### Body 
+
+Cards de productos
+Detalles 
+
+#### Navegación 
+
+Enrutamiento entre vistas 
+
+#### Carrito 
+
+Vista carrito compra 
+
+#### Checkout 
+
+Formulario del usuario 
+
+#### Contacto 
+
+LinkedIn 
+
+Instagram

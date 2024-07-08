@@ -1,18 +1,34 @@
-import { Flex, Button, Text } from '@chakra-ui/react'
+import { Flex, Button, Text, Card, CardBody, CardFooter } from '@chakra-ui/react'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
 //card con los productos
-const Item = ({imagen, precio, id}) => {
+const Item = ({imagen, precio, stock, id}) => {
   return (
-    <Flex direction={'column'} justify={'center'} width={'60px'} align={'center'} margin={'30px'}>
-      <img src={imagen}/>
-      <Text fontSize={'20px'}>${precio} </Text>
+    <Card maxW='sm' m={'5px'}>
+      <CardBody >
+      <img src={imagen} width={'100px'} />
+      <Text fontSize={'28px'}>${precio} </Text>
+      {
+      stock > 0 ?
+      <Text fontSize={'25px'}>Stock = {stock} </Text>
+      :
+      <Text fontSize={'25px'}>Sin stock! </Text>
+      }
+      </CardBody>
+      <CardFooter>
+      {  
+      stock > 0 ?  
       <Button variant="solid" margin={'10px'} background={'lightblue'} >
         <Link to={`/producto/${id}`}>Detalle</Link>
       </Button>
-      {/* <h1>{prod.variedad}</h1> */}
-    </Flex>
+      : 
+      <Button variant="solid" margin={'10px'} background={'lightgrey'} >
+        Detalle
+      </Button>
+      }
+      </CardFooter>
+    </Card>
   )
 }
 

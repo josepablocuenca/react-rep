@@ -7,12 +7,11 @@ import ItemCount from '../ItemCount/ItemCount'
 const ItemList = ({productos}) => {
   
   return (
-    <Flex>
+    <Flex wrap={'wrap'} justify={'center'} align={'center'} mt={5} mb={5}>
         {
           productos.map((prod) => (
           <Box key={prod.id}>  
             <Item {...prod} /> 
-            {/* <ItemCount /> */}
           </Box>  ))
           
         }

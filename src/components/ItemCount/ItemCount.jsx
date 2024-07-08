@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import { Button, ButtonGroup, Flex, Text } from '@chakra-ui/react'
+import { Box, Button, ButtonGroup, Flex, Text } from '@chakra-ui/react'
 
-const ItemCount = ({stock, inicial, agregarCarrito}) => {
+const ItemCount = ({stock, inicial, agregarCarrito, maximaDisponible}) => {
     //creamos un estado del componente Contador
     const [ contador, setContador] = useState(inicial)
 
     const incrementarContador = () => {
-        contador < stock && setContador(contador + 1)
+        contador < maximaDisponible && setContador(contador + 1)
     }
     const decrementarContador = () => {
         contador > inicial && setContador(contador - 1)
